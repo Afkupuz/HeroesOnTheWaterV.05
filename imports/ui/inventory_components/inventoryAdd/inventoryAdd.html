@@ -1,0 +1,25 @@
+<div layout="column" layout-padding>
+  <md-input-container>
+    <label>
+      Inventory Name:
+    </label>
+    <input type="text" ng-model="inventoryAdd.inventory.name"/>
+  </md-input-container>
+  <md-input-container>
+    <label>
+      Description:
+    </label>
+    <input type="text" ng-model="inventoryAdd.inventory.description"/>
+  </md-input-container>
+  <md-input-container>
+    <label>
+      Chapter:
+    </label>
+    <input type="text" ng-model="inventoryAdd.inventory.chapter"/>
+  </md-input-container>
+
+  <div flex>
+    <md-button ng-click="inventoryAdd.submit()" class="md-raised">Add Inventory!</md-button>
+  </div>
+  <inventory-upload files="inventoryAdd.inventory.images"></inventory-upload>
+</div>

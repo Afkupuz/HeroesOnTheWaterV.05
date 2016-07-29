@@ -1,0 +1,61 @@
+
+<div layout="column" layout-padding>
+  <md-input-container>
+    <label>
+      Edit Event Details:
+    </label>
+    <input type="text" ng-model="eventModify.event.name"/>
+  </md-input-container>
+  <div style="height:100px">
+    <label>
+    <!-- need to get a datepicker module from atmosphere -->
+      Date:
+    </label>
+    <md-datepicker ng-model="eventModify.event.date" md-placeholder="Enter date"></md-datepicker>
+  </div>
+  <md-input-container>
+    <label>
+      Time:
+    </label>
+    <input type="time" ng-model="eventModify.event.time"/>
+  </md-input-container>
+  <md-input-container>
+    <label>
+      Description:
+    </label>
+    <input type="text" ng-model="eventModify.event.description"/>
+  </md-input-container>
+    <md-input-container>
+    <label>
+      Address:
+    </label>
+    <input type="text" ng-model="eventModify.event.address"/>
+  </md-input-container>
+    <md-input-container>
+    <label>
+      Resources:
+    </label>
+    <input type="text" ng-model="eventModify.event.resources"/>
+  </md-input-container>
+    <md-input-container>
+    <label>
+      Organizer:
+    </label>
+    <input type="text" ng-model="eventModify.event.organizer"/>
+  </md-input-container>
+      <md-input-container>
+    <label>
+      Chapter:
+    </label>
+    <input type="text" ng-model="eventModify.event.chapter"/>
+  </md-input-container>
+  <div>
+    <event-upload files="eventModify.event.images"></event-upload>
+    <md-card-title-media ng-if="eventModify.event.images">
+            <div class="md-media-lg card-media">
+              <event-image images="eventModify.event.images"></event-image>
+            </div>
+    </md-card-title-media>
+  </div>
+    <md-button ng-click="eventModify.getlocation(eventModify.event)" class="md-raised">Save Changes</md-button>
+</div>
